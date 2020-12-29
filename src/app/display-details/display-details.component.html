@@ -1,0 +1,13 @@
+<div class="container">
+    <button (click)="paraHide()" type="button" class="btn btn-warning">
+        <p style="padding: 0; margin: 0;">Display Details</p>
+    </button>
+</div>
+
+<p *ngIf="paraShown1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eum ab asperiores aperiam unde cum eveniet error dolorum. Reiciendis repellendus ipsum quis sapiente placeat? Dicta quos eius consectetur quae soluta at natus. Aliquid quasi eaque molestiae exercitationem iusto nesciunt numquam tempora deleniti libero quod?</p>
+
+<ul *ngIf="paraShown1">
+
+    <p *ngFor="let lok of loki; let index = index" style="text-align: center;" [ngStyle]="{'background-color': index >= 3 ? 'black' : ''}" [ngClass]="{'over3': index >= 3}">{{lok}}</p>
+
+</ul>
